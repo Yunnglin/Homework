@@ -1,4 +1,6 @@
 from search.NRecord import NRecord
+from search.draw_chart import draw_tree
+from search.node import Node
 from search.sudoku import Sudoku
 from search.record import Record
 from search.table import Table
@@ -24,8 +26,24 @@ right_sudo = Sudoku(right)
 
 def disp_records(all_record):
     for i in range(len(all_record)):
+        print(i)
         for record in all_record[i]:
-            print(record.to_dict())
+            print(record.__repr__())
+
+
+def draw_records(all_record, url):
+    data = []
+    root = None
+    for i in range(len(all_record)):
+        for j in range(len(all_record[i])):
+            record = all_record[i][j]
+            if i == 0 and j == 0:
+                root = Node(name=record.sudoku.view(), path=record.path)
+                data.append(root.node)
+                continue
+            cur_node = Node(name=record.sudoku.view(), path=record.path)
+            root.find_parent(cur_node.node)
+    draw_tree(data, url)
 
 
 def disp_path(record):
@@ -56,7 +74,52 @@ def breath_first_search(sudoku):
         # 深度增加
         new_depth = first.depth + 1
         if first.sudoku.check_right():
-            return first.to_dict(), '搜索结果成功'
+            return first.__repr__(), '搜索结果成功'
+        directions = first.sudoku.posible_move(first.sudoku.find_zero())
+        # TODO
+        temp_record = []
+        for direction in directions:
+            new_sudoku = first.sudoku.move(first.sudoku.find_zero(), direction)
+            # 不能直接使用append 可直接list相加
+            new_path = first.path + [direction]
+            new_record = Record(new_sudoku, new_depth, new_path)
+            # TODO
+            temp_record.append(new_record)
+            if new_sudoku.check_right():
+                # TODO
+                all_record.append(temp_record)
+                draw_records(all_record, 'breath_first_search.html')
+                disp_records(all_record)
+                return new_record.__repr__(), '搜索结果成功'
+            else:
+                table.add_tail(new_record)
+        # TODO
+        all_record.append(temp_record)
+
+
+def depth_first_search(sudoku):
+    # 初始化
+    table = Table()
+    sudo = Sudoku(sudoku)
+    record = Record(sudo, 0, [])
+    table.add_head(record)
+    # TODO
+    all_record = [[record]]
+    while True:
+
+        if len(table.get_table()) > 100:
+            draw_records(all_record, 'depth_first_search.html')
+            disp_records(all_record)
+            break
+        if table.is_empty():
+            return '搜索结果失败'
+        first = table.get_table()[0]
+        # 将第一个结点从表中删除
+        table.del_head()
+        # 深度增加
+        new_depth = first.depth + 1
+        if first.sudoku.check_right():
+            return first.__repr__(), '搜索结果成功'
         directions = first.sudoku.posible_move(first.sudoku.find_zero())
         # TODO
         temp_record = []
@@ -71,39 +134,11 @@ def breath_first_search(sudoku):
                 # TODO
                 all_record.append(temp_record)
                 disp_records(all_record)
-                return new_record.to_dict(), '搜索结果成功'
-            else:
-                table.add_tail(new_record)
-        # TODO
-        all_record.append(temp_record)
-
-
-def depth_first_search(sudoku):
-    # 初始化
-    table = Table()
-    sudo = Sudoku(sudoku)
-    record = Record(sudo, 0, [])
-    table.add_head(record)
-    while True:
-        if table.is_empty():
-            return '搜索结果失败'
-        first = table.get_table()[0]
-        # 将第一个结点从表中删除
-        table.del_head()
-        # 深度增加
-        new_depth = first.depth + 1
-        if first.sudoku.check_right():
-            return first.to_dict(), '搜索结果成功'
-        directions = first.sudoku.posible_move(first.sudoku.find_zero())
-        for direction in directions:
-            new_sudoku = first.sudoku.move(first.sudoku.find_zero(), direction)
-            # 不能直接使用append 可直接list相加
-            new_path = first.path + [direction]
-            new_record = Record(new_sudoku, new_depth, new_path)
-            if new_sudoku.check_right():
-                return new_record.to_dict(), '搜索结果成功'
+                return new_record.__repr__(), '搜索结果成功'
             else:
                 table.add_head(new_record)
+        # TODO
+        all_record.append(temp_record)
 
 
 def branch_and_bound(sudoku):
@@ -127,7 +162,7 @@ def branch_and_bound(sudoku):
         if new_depth > d_max:
             continue
         if first.sudoku.check_right():
-            return first.to_dict(), '搜索结果成功'
+            return first.__repr__(), '搜索结果成功'
         directions = first.sudoku.posible_move(first.sudoku.find_zero())
         # TODO
         temp_record = []
@@ -141,8 +176,9 @@ def branch_and_bound(sudoku):
             if new_sudoku.check_right():
                 # TODO
                 all_record.append(temp_record)
+                draw_records(all_record, 'branch_and_bound.html')
                 disp_records(all_record)
-                return new_record.to_dict(), '搜索结果成功'
+                return new_record.__repr__(), '搜索结果成功'
             else:
                 table.add_tail(new_record)
         # TODO
@@ -168,7 +204,7 @@ def mountain_climbing(sudoku):
         # 深度增加
         new_depth = first.depth + 1
         if first.sudoku.check_right():
-            return first.to_dict(), '搜索结果成功'
+            return first.__repr__(), '搜索结果成功'
         directions = first.sudoku.posible_move(first.sudoku.find_zero())
         # TODO
         temp_record = []
@@ -186,8 +222,9 @@ def mountain_climbing(sudoku):
             if new_sudoku.check_right():
                 # TODO
                 all_record.append(temp_record)
+                draw_records(all_record, 'mountain_climbing.html')
                 disp_records(all_record)
-                return new_record.to_dict(), '搜索结果成功'
+                return new_record.__repr__(), '搜索结果成功'
             else:
                 table.add_tail(new_record)
         # TODO
@@ -210,7 +247,7 @@ def best_first_search(sudoku):
         # 深度增加
         new_depth = first.depth + 1
         if first.sudoku.check_right():
-            return first.to_dict(), '搜索结果成功'
+            return first.__repr__(), '搜索结果成功'
         directions = first.sudoku.posible_move(first.sudoku.find_zero())
         # TODO
         temp_record = []
@@ -225,6 +262,7 @@ def best_first_search(sudoku):
             if new_sudoku.check_right():
                 # TODO
                 all_record.append(temp_record)
+                draw_records(all_record, 'best_first_search.html')
                 disp_records(all_record)
                 return new_record.__repr__(), '搜索结果成功'
             else:
@@ -259,7 +297,7 @@ def a_star(sudoku):
         # 深度增加
         new_depth = first.depth + 1
         if first.sudoku.check_right():
-            return first.to_dict(), '搜索结果成功'
+            return first.__repr__(), '搜索结果成功'
         directions = first.sudoku.posible_move(first.sudoku.find_zero())
         # TODO
         temp_record = []
@@ -302,7 +340,9 @@ def a_star(sudoku):
             if new_sudoku.check_right():
                 # TODO
                 all_record.append(temp_record)
+
                 disp_records(all_record)
+                draw_records(all_record, 'A_star.html')
                 disp_path(new_record)
                 return new_record.__repr__(), '搜索结果成功'
         # TODO
@@ -312,7 +352,7 @@ def a_star(sudoku):
 
 # print(breath_first_search(sudoku))
 # print(depth_first_search(sudoku))
-print(branch_and_bound(sudoku))
+# print(branch_and_bound(sudoku))
 # print(mountain_climbing(sudoku))
 # print(best_first_search(sudoku))
-# print(a_star(sudoku))
+print(a_star(sudoku))

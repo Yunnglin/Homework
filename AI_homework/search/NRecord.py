@@ -19,6 +19,8 @@ class NRecord(Record):
 
     def __repr__(self):
         if self.aim_to:
-            return {'f(n)': self.f_n, 'sudoku': self.sudoku.get_sudoku(), 'aim_to': self.aim_to.sudoku.get_sudoku()}
+            return {'depth': self.depth, 'f(n)': self.f_n, 'path': self.path, 'sudoku': self.sudoku.get_sudoku(),
+                    'aim_to': self.aim_to.sudoku.get_sudoku()}
         else:
-            return {'depth': self.depth, 'f(n)': self.f_n, 'path': self.path, 'sudoku': self.sudoku.get_sudoku()}
+            return {'depth': self.depth, 'f(n)': self.f_n, 'path': self.path, 'sudoku': self.sudoku.get_sudoku(),
+                    'aim_to': None}

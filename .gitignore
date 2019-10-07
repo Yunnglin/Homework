@@ -1,6 +1,10 @@
 # MAC
 .DS_Store
 
+#MATLAB
+*.asv
+*.mat
+
 # miniprogram
 project.config.json
 

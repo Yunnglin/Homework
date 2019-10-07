@@ -9,5 +9,5 @@ class Record:
         self.depth = depth
         self.path = path
 
-    def to_dict(self):
+    def __repr__(self):
         return {'depth': self.depth, 'path': self.path, 'sudoku': self.sudoku.get_sudoku()}

@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>breath_first_search</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="e22b04ec0900400da22386ac0adc064a" class="chart-container" style="width:1800px; height:1000px;"></div>
+    <script>
+        var chart_e22b04ec0900400da22386ac0adc064a = echarts.init(
+            document.getElementById('e22b04ec0900400da22386ac0adc064a'), 'white', {renderer: 'canvas'});
+        var option_e22b04ec0900400da22386ac0adc064a = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "tree",
+            "name": "search_tree",
+            "data": [
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 3 0|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "right",
+                                                                "down",
+                                                                "up"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 3 4|\n|1 8 5|\n|7 6 0|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "right",
+                                                                "down",
+                                                                "down"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 3 4|\n|1 0 8|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "right",
+                                                                "down",
+                                                                "left"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|2 3 4|\n|1 8 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "right",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 3 0|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "right",
+                                                                "left",
+                                                                "right"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "right",
+                                                                "left",
+                                                                "down"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|0 2 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "right",
+                                                                "left",
+                                                                "left"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "right",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 3 0|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "up",
+                                                "right"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 3 0|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "up",
+                                                                "right"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "up",
+                                                                "down"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|0 2 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "up",
+                                                                "left"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "down",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 0|\n|1 4 3|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "right",
+                                                                "up"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 4 5|\n|7 6 0|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "right",
+                                                                "down"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "right",
+                                                                "left"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "down",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "down",
+                                                                "up"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|7 5 0|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "down",
+                                                                "right"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|0 7 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "down",
+                                                                "left"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "down",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|0 8 3|\n|2 1 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "left",
+                                                                "up"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "left",
+                                                                "right"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|7 1 4|\n|0 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "down",
+                                                                "left",
+                                                                "down"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "down",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "up",
+                                                "down"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 3 0|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "left",
+                                                                "right",
+                                                                "right"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "left",
+                                                                "right",
+                                                                "down"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|0 2 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "left",
+                                                                "right",
+                                                                "left"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "left",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|0 2 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "left",
+                                                                "down",
+                                                                "up"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "children": [],
+                                                            "name": "-------\n|1 2 3|\n|8 0 4|\n|7 6 5|\n-------\n",
+                                                            "path": [
+                                                                "up",
+                                                                "up",
+                                                                "left",
+                                                                "down",
+                                                                "right"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "name": "-------\n|1 2 3|\n|0 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "up",
+                                                        "left",
+                                                        "down"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|0 2 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "up",
+                                                "left"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                    "path": [
+                                        "up",
+                                        "up"
+                                    ]
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "up",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 8|\n|1 4 3|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "up",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 0|\n|1 4 3|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "right",
+                                                "up"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "down",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 5|\n|7 0 6|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "down",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 4 5|\n|7 6 0|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "right",
+                                                "down"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "left",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "left",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "left",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "right",
+                                                        "left",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "right",
+                                                "left"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                    "path": [
+                                        "up",
+                                        "right"
+                                    ]
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "up",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "up",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "up",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "up",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "down",
+                                                "up"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 0|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "right",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "right",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|7 5 0|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "down",
+                                                "right"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 6 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "left",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "down",
+                                                        "left",
+                                                        "right"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|0 7 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "down",
+                                                "left"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                    "path": [
+                                        "up",
+                                        "down"
+                                    ]
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|8 0 3|\n|2 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "up",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "up",
+                                                        "down"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|0 8 3|\n|2 1 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "left",
+                                                "up"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "right",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "right",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "right",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "right",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "left",
+                                                "right"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "down",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|7 1 4|\n|6 0 5|\n-------\n",
+                                                    "path": [
+                                                        "up",
+                                                        "left",
+                                                        "down",
+                                                        "right"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|7 1 4|\n|0 6 5|\n-------\n",
+                                            "path": [
+                                                "up",
+                                                "left",
+                                                "down"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                    "path": [
+                                        "up",
+                                        "left"
+                                    ]
+                                }
+                            ],
+                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                            "path": [
+                                "up"
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 0|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "up",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 8|\n|1 6 3|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "up",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 0|\n|1 6 3|\n|7 5 4|\n-------\n",
+                                            "path": [
+                                                "right",
+                                                "up",
+                                                "up"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 0|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "down",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "down",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|7 5 0|\n-------\n",
+                                            "path": [
+                                                "right",
+                                                "up",
+                                                "down"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 3|\n|1 8 6|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "left",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 0|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "left",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 5 6|\n|7 0 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "left",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 6|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "up",
+                                                        "left",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 0 6|\n|7 5 4|\n-------\n",
+                                            "path": [
+                                                "right",
+                                                "up",
+                                                "left"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 8 3|\n|1 6 0|\n|7 5 4|\n-------\n",
+                                    "path": [
+                                        "right",
+                                        "up"
+                                    ]
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "up",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "up",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "up",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "up",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "right",
+                                                "left",
+                                                "up"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 0|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "right",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "right",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|7 5 0|\n-------\n",
+                                            "path": [
+                                                "right",
+                                                "left",
+                                                "right"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 6 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "left",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "right",
+                                                        "left",
+                                                        "left",
+                                                        "right"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|0 7 5|\n-------\n",
+                                            "path": [
+                                                "right",
+                                                "left",
+                                                "left"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                    "path": [
+                                        "right",
+                                        "left"
+                                    ]
+                                }
+                            ],
+                            "name": "-------\n|2 8 3|\n|1 6 4|\n|7 5 0|\n-------\n",
+                            "path": [
+                                "right"
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|8 0 3|\n|2 6 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "up",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 6 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "up",
+                                                        "down"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|0 8 3|\n|2 6 4|\n|1 7 5|\n-------\n",
+                                            "path": [
+                                                "left",
+                                                "up",
+                                                "up"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 3|\n|6 8 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "right",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|6 4 0|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "right",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|6 7 4|\n|1 0 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "right",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 6 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "right",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|6 0 4|\n|1 7 5|\n-------\n",
+                                            "path": [
+                                                "left",
+                                                "up",
+                                                "right"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 6 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "down",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "up",
+                                                        "down",
+                                                        "right"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|0 7 5|\n-------\n",
+                                            "path": [
+                                                "left",
+                                                "up",
+                                                "down"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 8 3|\n|0 6 4|\n|1 7 5|\n-------\n",
+                                    "path": [
+                                        "left",
+                                        "up"
+                                    ]
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 0 3|\n|1 8 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "up",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 4 0|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "up",
+                                                        "right"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "up",
+                                                        "down"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 1 4|\n|7 6 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "up",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 0 4|\n|7 6 5|\n-------\n",
+                                            "path": [
+                                                "left",
+                                                "right",
+                                                "up"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 0|\n|7 5 4|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "right",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "right",
+                                                        "left"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|7 5 0|\n-------\n",
+                                            "path": [
+                                                "left",
+                                                "right",
+                                                "right"
+                                            ]
+                                        },
+                                        {
+                                            "children": [
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|0 6 4|\n|1 7 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "left",
+                                                        "up"
+                                                    ]
+                                                },
+                                                {
+                                                    "children": [],
+                                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                                    "path": [
+                                                        "left",
+                                                        "right",
+                                                        "left",
+                                                        "right"
+                                                    ]
+                                                }
+                                            ],
+                                            "name": "-------\n|2 8 3|\n|1 6 4|\n|0 7 5|\n-------\n",
+                                            "path": [
+                                                "left",
+                                                "right",
+                                                "left"
+                                            ]
+                                        }
+                                    ],
+                                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                                    "path": [
+                                        "left",
+                                        "right"
+                                    ]
+                                }
+                            ],
+                            "name": "-------\n|2 8 3|\n|1 6 4|\n|0 7 5|\n-------\n",
+                            "path": [
+                                "left"
+                            ]
+                        }
+                    ],
+                    "name": "-------\n|2 8 3|\n|1 6 4|\n|7 0 5|\n-------\n",
+                    "path": []
+                }
+            ],
+            "left": "left",
+            "top": "10%",
+            "symbol": "emptyCircle",
+            "symbolSize": 7,
+            "expandAndCollapse": true,
+            "layout": "orthogonal",
+            "orient": "TB",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "leaves": {
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                }
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "breath_first_search"
+        }
+    ]
+};
+        chart_e22b04ec0900400da22386ac0adc064a.setOption(option_e22b04ec0900400da22386ac0adc064a);
+    </script>
+</body>
+</html>

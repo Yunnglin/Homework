@@ -109,3 +109,18 @@ class Sudoku:
                 else:
                     print(pos[i][j], end='')
         print('-------')
+
+    def view(self):
+        _format: str = ""
+        pos = self.__sudoku
+        _format = _format + '-------\n'
+        for i in range(len(pos)):
+            for j in range(len(pos[i])):
+                if j == 0:
+                    _format = _format + '|{0} '.format(pos[i][j])
+                elif j == len(pos[i]) - 1:
+                    _format = _format + ' {0}|\n'.format(pos[i][j])
+                else:
+                    _format = _format + str(pos[i][j])
+        _format = _format + '-------\n'
+        return _format
