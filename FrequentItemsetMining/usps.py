@@ -96,9 +96,9 @@ class Model(nn.Module):
 
 def train(epochs):
     dataset = UpspDataset('ups.xlsx', train=True, transform=transforms.ToTensor())
-    dataloader = DataLoader(dataset, batch_size=32, shuffle=False, num_workers=3, drop_last=False)
+    dataloader = DataLoader(dataset, batch_size=36, shuffle=False, num_workers=3, drop_last=False)
 
-    optimizer = torch.optim.SGD(net.parameters(), lr=0.1, momentum=0.9)
+    optimizer = torch.optim.SGD(net.parameters(), lr=0.01, momentum=0.9)
     criterion = nn.CrossEntropyLoss()
 
     running_loss = 0
@@ -159,7 +159,7 @@ def write(digits):
 
 if __name__ == '__main__':
     net = Model()
-    train(30)  # 训练次数, 当前目录下没有model.pth文件时，进行训练
+    train(100)  # 训练次数, 当前目录下没有model.pth文件时，进行训练
     res = test(length=1260)  # 使用
 
     # 写入

@@ -1,0 +1,20 @@
+﻿<Window x:Class="MazeRunner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MazeRunner"
+        mc:Ignorable="d"
+        Title="MazeRunner" Height="520" Width="820" ResizeMode="CanMinimize"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration">
+    <Grid Background="#FFF4DDDD">
+        <WindowsFormsHost Height="470" Width="470" Name="pictureHost" Margin="334,10,9.6,10.4" Background="#FFD1F4FA">
+            <wf:PictureBox Height="590" Width="590" x:Name="mazeImage" />
+        </WindowsFormsHost>
+        <Grid HorizontalAlignment="Left" Height="470" Margin="10,10,0,0" VerticalAlignment="Top" Width="319" Background="#FFF2F7CC">
+            <ComboBox x:Name="selectFunc" HorizontalAlignment="Left" Margin="127,39,0,0" VerticalAlignment="Top" Width="138" Height="30"/>
+            <TextBlock HorizontalAlignment="Left" Margin="52,54,0,0" TextWrapping="Wrap" Text="选择方法" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Window>
