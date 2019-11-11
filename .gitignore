@@ -1,6 +1,12 @@
 # MAC
 .DS_Store
 
+#office
+*.xlsx
+
+#model
+*.pth
+
 #MATLAB
 *.asv
 *.mat
