@@ -12,9 +12,15 @@
         <WindowsFormsHost Height="470" Width="470" Name="pictureHost" Margin="334,10,9.6,10.4" Background="#FFD1F4FA">
             <wf:PictureBox Height="590" Width="590" x:Name="mazeImage" />
         </WindowsFormsHost>
-        <Grid HorizontalAlignment="Left" Height="470" Margin="10,10,0,0" VerticalAlignment="Top" Width="319" Background="#FFF2F7CC">
-            <ComboBox x:Name="selectFunc" HorizontalAlignment="Left" Margin="127,39,0,0" VerticalAlignment="Top" Width="138" Height="30"/>
-            <TextBlock HorizontalAlignment="Left" Margin="52,54,0,0" TextWrapping="Wrap" Text="选择方法" VerticalAlignment="Top"/>
+        <Grid HorizontalAlignment="Left" Height="470" Margin="10,10,0,0" VerticalAlignment="Top" Width="319" Background="#FFF7D4CC">
+            <ComboBox x:Name="selectFuncBox" HorizontalAlignment="Left" Margin="175,120,0,0" VerticalAlignment="Top" Width="120" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,120,0,0" TextWrapping="Wrap" Text="选择方法" VerticalAlignment="Top"/>
+            <Button x:Name="generateMazeBtn" Content="生成迷宫" HorizontalAlignment="Left" Margin="55,157,0,0" VerticalAlignment="Top" Width="73" Height="38" Click="generateMazeBtn_Click"/>
+            <Button x:Name="startRunBtn" Content="开始寻路" HorizontalAlignment="Left" Margin="193,157,0,0" VerticalAlignment="Top" Width="75" Height="38" Click="startRunBtn_Click"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,35,0,0" TextWrapping="Wrap" Text="水平方向格子数" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,71,0,0" TextWrapping="Wrap" Text="竖直方向格子数" VerticalAlignment="Top"/>
+            <ComboBox x:Name="xCountBox" HorizontalAlignment="Left" Margin="175,35,0,0" VerticalAlignment="Top" Width="120"/>
+            <ComboBox x:Name="yCountBox" HorizontalAlignment="Left" Margin="175,71,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>
     </Grid>
 </Window>

@@ -9,9 +9,9 @@ namespace MazeRunner.Classes.Maze
 {
     public class Grid
     {
-        private Tile[,] tiles;
-        private int xCount, yCount;
-
+        private readonly Tile[,] tiles;
+        private readonly int xCount;
+        private readonly int yCount;
 
         public Grid(int xCount, int yCount)
         {
@@ -23,7 +23,7 @@ namespace MazeRunner.Classes.Maze
             {
                 for (int y = 0; y < yCount; y++)
                 {
-                    SetTail(x, y, TileType.Empty);
+                    SetTile(x, y, TileType.Empty);
                 }
             }
             SetStartAndEnd();
@@ -41,13 +41,12 @@ namespace MazeRunner.Classes.Maze
             foreach (var tile in tiles)
             {
 
-                tile.Type = rand.Next(0, 10) > 5 ? 
+                tile.Type = rand.Next(0, 10) > 5 ?
                     TileType.Solid : TileType.Empty;
 
                 if (tile.Type != TileType.Empty)
                     continue;
 
-                // If it's empty, randomly give the path a weight
                 var weightSpread = rand.Next(0, 10);
                 if (weightSpread > 8)
                     tile.Weight = 3;
@@ -61,7 +60,7 @@ namespace MazeRunner.Classes.Maze
             SetStartAndEnd();
         }
 
-        public void SetTail(int x, int y, TileType type)
+        public void SetTile(int x, int y, TileType type)
         {
             tiles[x, y] = new Tile
             {
@@ -72,19 +71,23 @@ namespace MazeRunner.Classes.Maze
             SetStartAndEnd();
         }
 
-        public void SetTail(Coord coord, TileType type)
+        public void SetTile(Coord coord, TileType type)
         {
-            SetTail(coord.X, coord.Y, type);
+            SetTile(coord.X, coord.Y, type);
         }
 
         public Tile GetTile(int x, int y)
         {
-            if (x > tiles.GetLength(0) - 1 || x < 0 || y > tiles.GetLength(1) - 1 || y < 0)
+            if (x > xCount - 1 || x < 0 || y > yCount - 1 || y < 0)
                 return new Tile { Coord = new Coord(-1, -1), Type = TileType.Invalid };
 
             return tiles[x, y];
         }
 
+        public Tile GetTile(Coord coord)
+        {
+            return GetTile(coord.X, coord.Y);
+        }
 
         private void SetStartAndEnd()
         {

@@ -19,5 +19,19 @@ namespace MazeRunner.Classes.Maze
             X = x;
             Y = y;
         }
+
+        public override bool Equals(object obj)
+        {
+            Coord des = (Coord)obj;
+            return X == des.X && Y == des.Y;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1861411795;
+            hashCode = hashCode * -1521134295 + X.GetHashCode();
+            hashCode = hashCode * -1521134295 + Y.GetHashCode();
+            return hashCode;
+        }
     }
 }

@@ -25,13 +25,19 @@ namespace MazeRunner.Classes.Utils
         private int tileWidth;
         private int tileHeight;
 
-        public MazeDrawer(PictureBox image, int xCount = 15, int yCount = 15)
+        public MazeDrawer(PictureBox image, int xCount = 10, int yCount = 10, int seed = 0)
         {
             this.xCount = xCount;
             this.yCount = yCount;
             mazeImage = image;
             Grid = new Grid(xCount, yCount);
-            Grid.Shuffle();
+            if (seed == 0)
+                Grid.Shuffle();
+            else
+            {
+                Seed = seed;
+                Grid.Shuffle(Seed);
+            }
         }
 
         public void Draw()

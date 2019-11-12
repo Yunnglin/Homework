@@ -26,7 +26,7 @@ namespace MazeRunner.Classes.Utils
             AStar = 0,
             Dijkstra = 1,
             BreadthFirst = 2,
-            DeapFirst = 3
+            DepthFirst = 3
         }
     }
 }
