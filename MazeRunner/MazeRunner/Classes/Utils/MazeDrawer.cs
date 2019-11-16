@@ -31,13 +31,10 @@ namespace MazeRunner.Classes.Utils
             this.yCount = yCount;
             mazeImage = image;
             Grid = new Grid(xCount, yCount);
-            if (seed == 0)
-                Grid.Shuffle();
-            else
-            {
-                Seed = seed;
-                Grid.Shuffle(Seed);
-            }
+            if (seed == 0) 
+                seed = (int)DateTime.Now.Ticks;
+            Seed = seed;
+            Grid.Shuffle(seed);
         }
 
         public void Draw()
@@ -97,7 +94,10 @@ namespace MazeRunner.Classes.Utils
 
             mazeImage.Image = bitmap;
         }
-
+        public void Reset()
+        {
+            Grid.Shuffle(Seed);
+        }
         private Rectangle GetRectangle(int x, int y)
         {
             return new Rectangle(x * tileWidth, y * tileHeight, tileWidth, tileHeight);

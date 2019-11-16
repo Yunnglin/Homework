@@ -30,9 +30,14 @@ namespace MazeRunner.Classes.Algorithms
             {
                 case AlgorithmType.AStar:
                     return new AStar(grid);
+                    
                 case AlgorithmType.BreadthFirst:
+                    return null;
                 case AlgorithmType.Dijkstra:
+                    return null;
                 case AlgorithmType.DepthFirst:
+                    return new DepthFirst(grid);
+                    
                 default:
                     throw new KeyNotFoundException();
             }

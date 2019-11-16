@@ -107,7 +107,12 @@ namespace MazeRunner.Classes.Algorithms
             return new SearchSummary
             {
                 Path = Path?.ToArray(),
-                PathCost = GetPathCost()
+                PathCost = GetPathCost(),
+                Operations=Operations++,
+                UnexploredListSize = Grid.GetCountOfType(TileType.Empty),
+                OpenListSize = openList.Count,
+                Neighbours=neighbours.Count
+                
             };
 
         }

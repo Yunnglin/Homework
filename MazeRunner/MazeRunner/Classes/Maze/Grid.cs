@@ -41,7 +41,7 @@ namespace MazeRunner.Classes.Maze
             foreach (var tile in tiles)
             {
 
-                tile.Type = rand.Next(0, 10) > 5 ?
+                tile.Type = rand.Next(0, 10) > 6 ?
                     TileType.Solid : TileType.Empty;
 
                 if (tile.Type != TileType.Empty)
