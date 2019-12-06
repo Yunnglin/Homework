@@ -17,5 +17,13 @@ namespace MazeRunner.Classes.Algorithms
         public int UnexploredListSize { get; set; }
         public int Operations { set; get; }
         public int Neighbours { set; get; }
+
+        public BaseAlgorithm BaseAlgorithm
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

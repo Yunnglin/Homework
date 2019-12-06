@@ -29,27 +29,35 @@ namespace MazeRunner
         private MazeDrawer mazeDrawer = null;
         private readonly int MinCount = 10;
         private readonly int MaxCount = 20;
-        private readonly System.Timers.Timer timer;
+        private System.Timers.Timer timer;
         private Stopwatch stopwatch;
         BaseAlgorithm algorithm;
         public MainWindow()
         {
             InitializeComponent();
+            init();
+        }
 
+        public void init()
+        {
             SetItemSource();
-            
-            //每5ms绘制一次
-            timer = new System.Timers.Timer(5);
+            //timer
+            timer = new System.Timers.Timer(speedSlider.Value);
             timer.Elapsed += RunNextStep;
+            //stopwatch
+            stopwatch = new Stopwatch();
         }
 
         public void InitialMaze()
         {
             timer.Stop();
-            int seed = FindWorkableSeed();
-            while (seed == 0)
+            int seed;
+            do
+            {
                 seed = FindWorkableSeed();
-            mazeDrawer = new MazeDrawer(mazeImage, (int)xCountBox.SelectedItem, (int)yCountBox.SelectedItem);
+            } while (seed == 0);
+
+            mazeDrawer = new MazeDrawer(mazeImage, (int)xCountBox.SelectedItem, (int)yCountBox.SelectedItem, seed);
             mazeDrawer.Draw();
         }
 
@@ -69,7 +77,7 @@ namespace MazeRunner
             Dictionary<AlgorithmType, string> funcDic = new Dictionary<AlgorithmType, string>
             {
                 {AlgorithmType.AStar,"A*" },
-                {AlgorithmType.Dijkstra,"Dijkstra"},
+                //{AlgorithmType.Dijkstra,"Dijkstra"},
                 {AlgorithmType.BreadthFirst,"Breadth First" },
                 {AlgorithmType.DepthFirst,"Depth First" }
             };
@@ -109,14 +117,19 @@ namespace MazeRunner
             timeTB.Text = "0s";
             costTB.Text = "0";
             unSearchTB.Text = "0";
+
             //获取选中的算法
             algorithm = AlgorithmFactory.GetFactory().GetAlgorithm((AlgorithmType)selectFuncBox.SelectedValue, mazeDrawer.Grid);
-
+           
+            //重置迷宫
             mazeDrawer.Reset();
+
+            //每隔一定时间绘制一次
+            timer.Interval = speedSlider.Value;
             timer.Start();
 
-            stopwatch = new Stopwatch();
-            stopwatch.Start();
+            //stopwatch重新开始
+            stopwatch.Restart();
         }
 
         private void RunNextStep(object sender, System.Timers.ElapsedEventArgs e)
@@ -130,6 +143,7 @@ namespace MazeRunner
             }
             else if (!summary.PathPossible)
             {
+                stopwatch.Stop();
                 MessageBox.Show("无法找到可行路径");
             }
             else
@@ -152,10 +166,15 @@ namespace MazeRunner
             Dispatcher.BeginInvoke((Action)delegate ()
             {
                 lengthTB.Text = summary.Path.Length.ToString();
-                timeTB.Text = string.Format("{0:0.000}", stopwatch.Elapsed.TotalSeconds) +"s";
+                timeTB.Text = string.Format("{0:0.000}", stopwatch.Elapsed.TotalSeconds) + "s";
                 costTB.Text = summary.PathCost.ToString();
                 unSearchTB.Text = summary.UnexploredListSize.ToString();
             });
+
+        }
+
+        private void speedSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
             
         }
     }

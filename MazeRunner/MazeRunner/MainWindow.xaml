@@ -21,14 +21,18 @@
             <TextBlock HorizontalAlignment="Left" Margin="55,71,0,0" TextWrapping="Wrap" Text="竖直方向格子数" VerticalAlignment="Top"/>
             <ComboBox x:Name="xCountBox" HorizontalAlignment="Left" Margin="175,35,0,0" VerticalAlignment="Top" Width="120"/>
             <ComboBox x:Name="yCountBox" HorizontalAlignment="Left" Margin="175,71,0,0" VerticalAlignment="Top" Width="120"/>
-            <TextBlock HorizontalAlignment="Left" Margin="55,253,0,0" TextWrapping="Wrap" Text="路径长度：" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="55,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="路径"/><Run Text="花费"/><Run Text="："/></TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="55,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="搜索耗时："/>
-            <TextBlock x:Name="lengthTB" HorizontalAlignment="Left" Margin="144,253,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-            <TextBlock x:Name="costTB" HorizontalAlignment="Left" Margin="144,297,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-            <TextBlock x:Name="unSearchTB" HorizontalAlignment="Left" Margin="144,337,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="55,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="未搜索长度："/>
-            <TextBlock x:Name="timeTB" HorizontalAlignment="Left" Margin="144,380,0,0" TextWrapping="Wrap" Text="0s" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,282,0,0" TextWrapping="Wrap" Text="路径长度：" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="路径"/><Run Text="花费"/><Run Text="："/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="55,409,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="搜索耗时："/>
+            <TextBlock x:Name="lengthTB" HorizontalAlignment="Left" Margin="144,282,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+            <TextBlock x:Name="costTB" HorizontalAlignment="Left" Margin="144,326,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+            <TextBlock x:Name="unSearchTB" HorizontalAlignment="Left" Margin="144,366,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="未搜索长度："/>
+            <TextBlock x:Name="timeTB" HorizontalAlignment="Left" Margin="144,409,0,0" TextWrapping="Wrap" Text="0s" VerticalAlignment="Top"/>
+            <Slider x:Name="speedSlider" HorizontalAlignment="Left" Margin="55,250,0,0" VerticalAlignment="Top" Width="213" ValueChanged="speedSlider_ValueChanged" Minimum="5" Maximum="50"/>
+            <TextBlock HorizontalAlignment="Left" Margin="55,220,0,0" TextWrapping="Wrap" Text="速度调节：" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="38,250,0,0" TextWrapping="Wrap" Text="快" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="273,250,0,0" TextWrapping="Wrap" Text="慢" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Window>

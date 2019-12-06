@@ -16,6 +16,14 @@ namespace MazeRunner.Classes.Algorithms
         public int G { get; set; }
         public int H { get; set; }
 
+        public BaseAlgorithm BaseAlgorithm
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public Node(int id, int? parentId, int x, int y, int g, int h)
         {
             Id = id;

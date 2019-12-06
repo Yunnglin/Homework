@@ -29,6 +29,14 @@ namespace MazeRunner.Classes.Maze
             SetStartAndEnd();
         }
 
+        public Utils.MazeDrawer MazeDrawer
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void Shuffle()
         {
             Shuffle((int)DateTime.Now.Ticks);

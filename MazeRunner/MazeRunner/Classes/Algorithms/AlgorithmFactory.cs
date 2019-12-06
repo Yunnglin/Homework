@@ -11,6 +11,39 @@ namespace MazeRunner.Classes.Algorithms
     public class AlgorithmFactory
     {
         private static AlgorithmFactory factory = null;
+
+        public DepthFirst DepthFirst
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public AStar AStar
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public BreadthFirst BreadthFirst
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Utils.Type Type
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static AlgorithmFactory GetFactory()
         {
             if (factory == null)
@@ -32,7 +65,7 @@ namespace MazeRunner.Classes.Algorithms
                     return new AStar(grid);
                     
                 case AlgorithmType.BreadthFirst:
-                    return null;
+                    return new BreadthFirst(grid);
                 case AlgorithmType.Dijkstra:
                     return null;
                 case AlgorithmType.DepthFirst:

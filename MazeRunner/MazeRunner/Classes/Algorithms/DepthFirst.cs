@@ -21,6 +21,9 @@ namespace MazeRunner.Classes.Algorithms
         public override SearchSummary Run()
         {
             CurrentNode = stack.Peek();
+            if (CurrentNode == null) {
+                return GetSearchSummary();
+            }
             // 找到
             if (CurrentNode.Coord.Equals(Destination))
             {
@@ -33,7 +36,7 @@ namespace MazeRunner.Classes.Algorithms
                 return GetSearchSummary();
             }
             // 获取未访问过的相邻节点
-            var neighbours = GetNeighbours(CurrentNode).Where(x => !AlreadyVisited(new Coord(x.X, x.Y))).ToArray();
+            var neighbours = GetNeighbours(CurrentNode).Where(x => !AlreadyVisited(x)).ToArray();
             if (neighbours.Any())
             {
                 foreach (var neighbour in neighbours)

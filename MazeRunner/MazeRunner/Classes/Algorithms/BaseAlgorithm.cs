@@ -33,6 +33,14 @@ namespace MazeRunner.Classes.Algorithms
             Id = 1;
         }
 
+        public MainWindow MainWindow
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         //开始运行
         public abstract SearchSummary Run();
 

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MazeRunner.Classes.Algorithms.AlgorithmFactory">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Type" Type="MazeRunner.Classes.Utils.Type" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="3.938" />
+        <Point X="12.25" Y="4.311" />
+        <Point X="12.247" Y="4.311" />
+        <Point X="12.247" Y="7.361" />
+        <Point X="10" Y="7.361" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAACAABAAACAAAAAAAAAAQAAAEAAAAQ=</HashCode>
+      <FileName>Classes\Algorithms\AlgorithmFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DepthFirst" />
+      <Property Name="AStar" />
+      <Property Name="BreadthFirst" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.Classes.Utils.Type">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="MazeRunner.Classes.Utils.Type.TileType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Utils\Type.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="MazeRunner.Classes.Utils.Type.AlgorithmType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Utils\Type.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Utils\Type.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MazeRunner.Classes.Utils.MazeDrawer">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <AssociationLine Name="MainWindow" Type="MazeRunner.MainWindow" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="6.188" />
+        <Point X="2.5" Y="6.188" />
+        <Point X="2.5" Y="4.97" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABIgQAIAAABgAAAEAEAAAAAAggAAAAAQAAAACAAAE=</HashCode>
+      <FileName>Classes\Utils\MazeDrawer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainWindow" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.Classes.Algorithms.AStar">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="MazeRunner.Classes.Algorithms.BaseAlgorithm" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="3.25" />
+        <Point X="8.5" Y="3.25" />
+        <Point X="8.5" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAACBAAAAAAAAAAAAAAAAAABAAAAAAEI=</HashCode>
+      <FileName>Classes\Algorithms\AStar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MazeRunner.Classes.Algorithms.BaseAlgorithm">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <AssociationLine Name="MainWindow" Type="MazeRunner.MainWindow" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="4.471" />
+        <Point X="6.75" Y="4.759" />
+        <Point X="5.553" Y="4.759" />
+        <Point X="5.553" Y="5.345" />
+        <Point X="2.5" Y="5.345" />
+        <Point X="2.5" Y="4.97" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.54" Y="0.11" Height="0.174" Width="1.693" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAgACgAAAAAIAAAAEAAABAAAAAAAEAAAAAEiAAkI=</HashCode>
+      <FileName>Classes\Algorithms\BaseAlgorithm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.Classes.Algorithms.BreadthFirst">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="MazeRunner.Classes.Algorithms.BaseAlgorithm" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="3.25" />
+        <Point X="7.875" Y="3.25" />
+        <Point X="7.875" Y="4.816" />
+        <Point X="8.5" Y="4.816" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAABAAAAgAAAAAAAAAAAAAAAAAEI=</HashCode>
+      <FileName>Classes\Algorithms\BreadthFirst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MazeRunner.Classes.Algorithms.DepthFirst">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="MazeRunner.Classes.Algorithms.BaseAlgorithm" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="3.25" />
+        <Point X="7.875" Y="3.25" />
+        <Point X="7.875" Y="1.474" />
+        <Point X="8.5" Y="1.474" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAAAAAAAAEI=</HashCode>
+      <FileName>Classes\Algorithms\DepthFirst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MazeRunner.Classes.Algorithms.Node">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAIAAAAAAAAAAAAAAAAAAQgAAGEAAAAA=</HashCode>
+      <FileName>Classes\Algorithms\Node.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseAlgorithm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.Classes.Algorithms.SearchSummary">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAgAAAIIAAAAAgAAAAAAAAAAwAAAAAAAgAQA=</HashCode>
+      <FileName>Classes\Algorithms\SearchSummary.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseAlgorithm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.Classes.Maze.Coord">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAYAA=</HashCode>
+      <FileName>Classes\Maze\Coord.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Grid" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.Classes.Maze.Grid">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARABAAAIAAAAgAAAAAAAAAACAgAAAAAAAAAAIACAGAA=</HashCode>
+      <FileName>Classes\Maze\Grid.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MazeDrawer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.Classes.Maze.Tile">
+    <Position X="1.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAACAAAAAAQQAAAAAAAAA=</HashCode>
+      <FileName>Classes\Maze\Tile.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Grid" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MazeRunner.MainWindow">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BYQgAACBAAABIAAAAAEAAAAAIAAAAAIACABAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

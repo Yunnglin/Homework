@@ -113,6 +113,21 @@ namespace MazeRunner.Classes.Utils
             return new Font(FontFamily.GenericMonospace, Math.Min(tileWidth, tileHeight) / 1.8f, FontStyle.Bold);
         }
 
+        public MainWindow MainWindow
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Type Type
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 
 }

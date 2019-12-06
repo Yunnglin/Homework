@@ -69,6 +69,7 @@
     <Compile Include="Classes\Algorithms\AlgorithmFactory.cs" />
     <Compile Include="Classes\Algorithms\AStar.cs" />
     <Compile Include="Classes\Algorithms\BaseAlgorithm.cs" />
+    <Compile Include="Classes\Algorithms\BreadthFirst.cs" />
     <Compile Include="Classes\Algorithms\DepthFirst.cs" />
     <Compile Include="Classes\Algorithms\Node.cs" />
     <Compile Include="Classes\Algorithms\SearchSummary.cs" />
@@ -100,6 +101,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

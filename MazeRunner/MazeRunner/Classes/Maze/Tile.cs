@@ -12,5 +12,13 @@ namespace MazeRunner.Classes.Maze
         public Coord Coord { get; set; }
         public TileType Type { get; set; }
         public int Weight { get; set; }
+
+        public Grid Grid
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
